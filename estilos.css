@@ -1,0 +1,590 @@
+
+    /* Para acomodar en fila horizontal los cuadros de 'Objetivos'*/
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    /* Formato para el cuerpo */
+    body {
+    font-size: 16px;
+    font-family: var(--body-font);
+    
+    }
+
+    /* Header */
+
+    /* Configuración para la imagen y texto principal */
+    header {
+    width: 100%;
+    height: 1030px;
+    background-image: url(banner.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #000;
+    text-align: center;
+    }
+
+    /* Para la barra de navegación */
+    nav{
+    display: flex;
+    align-items: center;
+    }
+
+    /* root para variables globales*/
+    /* para el footer y el tipo de letra en el body y header*/
+    :root {
+
+    --blue-footer: hsl(216, 53%, 9%);
+    --body-font: 'Open Sans', sans-serif;
+    --heading-font: 'Raleway', sans-serif;
+    }
+
+    /* contenedor para el logo y los datos de la barra de navegación */
+    .container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+    overflow: hidden;
+    }
+
+    /* ancho del logo */
+    .nav__logo{
+    width: 30px;
+    }
+
+    /* tamaño del logo */
+    .nav__img{
+    width: 500%;
+    display: block;
+    }
+
+    /* Configuración para los datos de la barra de navegación */
+    .nav__link{
+    display: inline-block;
+    color: #000;
+    font-size: 30px;
+    text-decoration: none;
+    margin-left: .8em;
+    }
+
+    /* Acomodar los datos de la barra de navegación */
+    .nav__link:first-of-type{
+    margin-left: auto;
+    }
+
+    /* Texto principal */
+    header .textos {
+    margin-top: 130px;
+    }
+
+    /* Tamaño del texto principal */
+    header .titulo {
+    font-size: 85px;
+    }
+
+    /* recuadro transparente entre el texto principal y el texto secundario */
+    .sesgoabajo {
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 35vh 100vw;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+    }
+
+    /* para que la imagen se vea recortada en diagonal*/
+    .sesgoarriba {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 35vh 100vw 0 0;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+    }
+
+    /* espacio para el texto secundario */
+    .contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 52px 0;
+    }
+
+    /* recuadro para el contenedor del texto secundario*/
+    .acerca-de {
+    background-color: white;
+    }
+
+    /* Main */
+
+    /* espacio para el título del texto secundario */
+    .contenedor-in {
+    text-align: center;
+    font-size: 56px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    }
+
+    /* texto secundario */
+    .parrafo {
+    font-size: 30px;
+    margin-bottom: 13px;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 24px;
+    color: rgb(24, 16, 16);
+    }    
+
+    /* recuadro para las imágenes de 'Proyectos' */
+    .galeria {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    }
+
+    /* configuración para las imágenes */
+    .imagenes {
+    width: 20%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    }
+
+    /* configuración de tamaños para las imágenes de 'Proyectos' */
+    .imagenes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+    /* configuración para el recuadro del texto 'Proyecto' */
+    .proyecto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 73, 94, 0.815);
+    }
+
+    /* tamaño del texto del cuadro 'Proyecto' */
+    .proyecto h2 {
+    position: relative;
+    top: 45%;
+    text-align: center;
+    color: #fff;
+    }
+
+    /* línea blanca debajo del texto de 'Proyecto' */
+    .proyecto div {
+    position: relative;
+    display: block;
+    top: 46%;
+    width: 40px;
+    height: 5px;
+    background: #fff;
+    margin: auto;
+    }
+
+    /* cuadro para poner los 3 recuadros de textos de 'Objetivos' */
+    .cuadroObjetivos {
+    background-color: white;
+    }
+
+    /* recuadros para los 3 textos de 'Objetivos' */
+    .cards {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    }
+
+    /* configuración para el cuadro de cada uno de los objetivos */
+    .card {
+    margin: 20px 0;
+    width: 30%;
+    height: 400;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 0px 4px 0 rgba(52, 73, 94, 0.849);
+    }
+
+    /* espacio para colocar la imagen de cada uno de los objetivos */
+    .cards img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 100%;
+    }
+
+    /* parte superior del recuadro de los asesores */
+    .fondo {
+    height: 900px;
+    position: relative;
+    background-image: url(fondo.png);
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: center;
+    padding-top: 130px;
+    }
+
+    /* Formato para los 2 textos de los asesores */
+    .titulo-asesores,
+    .subtitulo-asesores {
+    color: #fff;
+    text-align: center;
+    }
+
+    /* Configuración para el texto principal de los asesores */
+    .titulo-asesores {
+    font-size: 61px;
+    margin-top: 48px;
+    margin-bottom: 40px;
+    }
+
+    /* Configuración para el texto secundario de los asesores */
+    .subtitulo-asesores {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 64px;
+    }
+
+    /* Ajustes para los 3 cuadros de los maestros */
+    .maestros {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+    width: 100%;
+    justify-content: space-between;
+    }
+
+    /* Ajustes para el ancho de cada cuadro para insertar las imágenes de los maestros */
+    .maestro {
+    width: 30%;
+    }    
+
+    /* Ajuste para las imágenes en los cuadros de los maestros */
+    .maestro img {
+    width: 100%;
+    }
+
+    /* Footer */
+
+    /* color del pie de página */
+    .footer{
+    background-color: var(--blue-footer);
+    color: #fff;
+    }
+
+    /* recuadro para los elementos del pie de pagina */
+    .footer__items{
+    display: grid;
+    gap: 1em;   
+    }
+
+    /* ajustes para los recuadros de texto de los datos del footer */
+    .footer__contact{
+    color: #fff;
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    }
+
+    /* para poner el texto de la dirección en color blanco*/
+    .footer__contact a {
+    color: white;
+    text-decoration: none;
+    }
+
+    /* margen entre el espacio para la dirección y el número de teléfono */
+    .footer__contact--second {
+    margin-bottom: 1em;
+    }
+
+    /* ajuste para la imagen de cada uno de los íconos en el footer */
+    .footer__icon {
+    margin-top: 3px;
+    }
+
+    /* configuración para el ícono de facebook */
+    .footer__social {
+    margin-top: 2em;
+    margin: 0 auto;
+    }
+
+    /* configuración para el círculo del ícono de Facebook */
+    .footer__media {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-right: 20px;
+    }
+
+    /* Ajustes para los derechos de autor */
+    .footer_copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    }
+
+    /* Ajustes para la fecha de actualización y el nombre en los derechos de autor del footer, este es
+    diferente para que se ajuste centrado y no a la derecha */
+    .footer_copyright2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+   }
+
+}
+
+
+
+/* Responsiva */
+
+@media screen and (max-width:1100px) {
+  
+   /* Header */
+
+    header {
+    width: 100%;
+    height: 640px;
+    background-image: url(banner.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #000;
+    text-align: center;
+    }
+
+    /* Tamaño del texto principal */    
+    header .titulo {
+        font-size: 40px;
+    }
+
+
+    /* Configuración para los datos de la barra de navegación */
+    .nav__link{
+    display: inline-block;
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: .8em;
+    }
+
+    /* ancho del logo */
+    .nav__logo{
+    width: 10px;
+    }
+
+    /* tamaño del logo */
+    .nav__img{
+    width: 300%;
+    display: none;
+    }
+
+    /* configuración para el cuadro de cada uno de los objetivos */
+    .card {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width:680px) {
+    
+    /* Header */
+
+    /* Configuración para los datos de la barra de navegación */
+    .nav__link{
+    display: inline-block;
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: .8em;
+    }
+
+    /* ancho del logo */
+    .nav__logo{
+    width: 10px;
+    }
+
+    /* tamaño del logo */
+    .nav__img{
+    width: 900%;
+    display: block;
+    }
+
+    /* Configuración para la imagen principal */
+    header {
+    width: 100%;
+    height: 600px;
+    background-image: url(banner.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #000;
+    text-align: center;
+    }
+
+    /* Texto principal */
+    header .textos {
+        margin-top: 100px;
+    }
+    
+    /* Tamaño del texto principal */
+    header .titulo {
+        font-size: 25px;
+    }
+
+    /* texto secundario */
+    .parrafo {
+    font-size: 15px;
+    margin-bottom: 13px;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 24px;
+    color: rgb(24, 16, 16);
+    }
+
+    /* Para que las 2 imágenes none no aparezcan con este media querie (si aparecieran entonces se verian encimadas)*/
+    .none {
+        display: none
+    }
+    /* configuración para las imágenes */
+    .imagenes {
+        flex-grow: 1;
+    }
+    /* configuración para el cuadro de cada uno de los objetivos */
+    .card {
+        width: 90%;
+    }
+    /* parte superior del recuadro de los asesores */
+    .fondo {
+        height: auto;
+    }
+    /* Para ele texto de 'y muchos más' */
+    .secundario {
+        display: auto;
+    }
+    /* Ajustes para el ancho de cada cuadro de los maestros */
+    .maestro {
+        width: 90%;
+        height: 300px;
+        margin-bottom: 50px;
+    }
+}
+
+
+
+@media screen and (max-width:460px) {
+
+    /* Header*/
+
+    /* Configuración para la imagen y texto principal */
+    header {
+    width: 100%;
+    height: 610px;
+    background-image: url(banner.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #000;
+    text-align: center;
+    }
+
+    /* Configuración para los datos de la barra de navegación */
+    .nav__link{
+    display: inline-block;
+    color: #000;
+    font-size: 15px;
+    text-decoration: none;
+    margin-left: .8em;
+    }
+
+    /* tamaño del logo */
+    .nav__img{
+    width: 500%;
+    display: block;
+    }
+
+    /* Texto principal */
+    header .textos {
+        margin-top: 100px;
+    }
+
+    /* Tamaño del texto principal */
+    header .titulo {
+        font-size: 25px;
+    }
+
+    /* texto secundario */
+    .parrafo {
+    font-size: 15px;
+    margin-bottom: 13px;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 24px;
+    color: rgb(24, 16, 16);
+    }
+
+    /* Para que las 2 imágenes none no aparezcan con este media querie */
+    .none {
+        display: none
+    }
+
+    /* configuración para las imagenes */
+    .imagenes {
+        flex-grow: 1;
+    }
+
+    /* configuración para el cuadro de cada uno de los objetivos */
+    .card {
+        width: 90%;
+    }
+
+    /* parte superior del recuadro de los asesores */
+    .fondo {
+        height: auto;
+    }
+
+    /* Para el texto de 'y muchos más' */
+    .secundario {
+        display: auto;
+    }
+
+
+
+   /* Ajustes para el ancho de cada cuadro para insertar las imágenes de los maestros */
+    .maestro {
+        width: 90%;
+        height: 200px;
+        margin-bottom: 20px;
+    }       
+
+}
